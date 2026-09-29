@@ -1,0 +1,14 @@
+{
+  "name": "gsc-quick-wins",
+  "description": "Squeeze more traffic from pages Google already ranks — find Search Console keywords stuck in positions 4–20 and get an exact fix list.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Thamiziniyan",
+    "email": "thamiz@iniyan.in",
+    "url": "https://iniyan.in"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/iniyan/gsc-quick-wins",
+  "repository": "https://github.com/iniyan/gsc-quick-wins",
+  "keywords": ["seo", "google-search-console", "gsc", "ctr", "rankings", "content", "skill"]
+}

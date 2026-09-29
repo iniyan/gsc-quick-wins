@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skill frontmatter present
+        run: |
+          head -1 skills/gsc-quick-wins/SKILL.md | grep -q '^---$'
+          grep -q '^name: gsc-quick-wins$' skills/gsc-quick-wins/SKILL.md
+      - name: Manifests are valid JSON
+        run: |
+          python -m json.tool .claude-plugin/plugin.json > /dev/null
+          python -m json.tool .claude-plugin/marketplace.json > /dev/null
+      - name: Scorer runs on the sample export (md, csv, json)
+        run: |
+          S=skills/gsc-quick-wins/scripts/find_quick_wins.py
+          python $S examples/sample-Queries.csv
+          python $S examples/sample-Queries.csv --format csv > /dev/null
+          python $S examples/sample-Queries.csv --format json | python -m json.tool > /dev/null

@@ -1,0 +1,6 @@
+# Symlinks — never subject to text/EOL normalization
+.agents/skills/gsc-quick-wins -text
+.claude/skills/gsc-quick-wins -text
+.opencode/skills/gsc-quick-wins -text
+*.py text eol=lf
+*.sh text eol=lf

@@ -1,0 +1,16 @@
+{
+  "name": "gsc-quick-wins",
+  "description": "No new articles. More traffic. Turn your Google Search Console export into a prioritised fix list for pages already ranking in positions 4–20.",
+  "owner": {
+    "name": "Thamiziniyan",
+    "email": "thamiz@iniyan.in",
+    "url": "https://iniyan.in"
+  },
+  "plugins": [
+    {
+      "name": "gsc-quick-wins",
+      "source": "./",
+      "description": "Find GSC keywords in positions 4–20, diagnose why they're stuck, and get exact titles, H2s, FAQs and internal links to push them to page one."
+    }
+  ]
+}
